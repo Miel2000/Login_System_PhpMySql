@@ -13,7 +13,7 @@
 
     <?php
     $name = $_GET['username'];
-    $req = $pdo->prepare('SELECT ? FROM `users` WHERE 2');
+    $req = $pdo->prepare('SELECT ? FROM `users`');
     $req->execute(array($name));
     //$pelo = $req->fetchAll();
     $pelo = $req->fetch(PDO::FETCH_ASSOC);
